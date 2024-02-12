@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-  get("/", { :controller => "users", :action => "home" })
-  get("/users", { :controller => "users", :action => "all_users" })
-  get("/users/:username", { :controller => "user", :action => "show" })
+  get("/", { :controller => "users", :action => "index" })
+  get("/users", { :controller => "users", :action => "index" })
+  get("/users/:username", { :controller => "users", :action => "show" })
   post("/insert_user_record", { :controller => "venues", :action => "create" })
-  post("/update_users/:user_id", { :controller => "users", :action => "update" })
+  post("/update_user/:user_id", { :controller => "users", :action => "update" })
 
   get("/venues", { :controller => "venues", :action => "index" })
   post("/insert_venue_record", { :controller => "venues", :action => "create" })
