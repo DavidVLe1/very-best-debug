@@ -6,6 +6,6 @@ class CommentsController < ApplicationController
     comment.body = params.fetch("query_body")
     comment.save
     
-    redirect_to("/venues/#{comment.venue_id}")
+    redirect_to("/venues/#{comment.venue_id.to_s}")
   end
 end
